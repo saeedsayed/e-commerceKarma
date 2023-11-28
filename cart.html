@@ -41,22 +41,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                SHOP
-                            </a>
-                            <ul class="dropdown-menu header__dropdown">
-                                <li class="nav-item"><a class="nav-link" href="category.html">shop category</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="product-detail.html">product
-                                        details</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="checkout.html">product
-                                        checkout</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="cart.html">shopping cart</a></li>
-                                <li class="nav-item"><a class="nav-link" href="confirmation.html">confirmation</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">SHOP</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="blog.html">BLOG</a>
@@ -64,7 +50,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">CONTACT</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="login-btn">
                             <a class="nav-link" href="login.html">
                                 LOGIN
                                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -73,8 +59,8 @@
                     </ul>
                     <ul class="navbar-nav flex-row align-items-center">
                         <li class="nav-item nav-item--cart">
-                            <a class="nav-link " href="cart.html">
-                                <i class="fa-solid fa-briefcase"></i>
+                            <a class="nav-link active" href="cart.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </li>
                         <li class="nav-item nav-item--search">
@@ -109,7 +95,7 @@
                     <h1>Shopping Cart</h1>
                     <div class="d-flex">
                         <a href="index.html">Home <i class="fa fa-arrow-right"></i></a>
-                        <a href="checkout.html">Cart</a>
+                        <a href="cart.html">Cart</a>
                     </div>
                 </div>
             </div>
@@ -128,88 +114,8 @@
                         <th>Total</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center gap-3 flex-column flex-md-row">
-                                <div class="table__img-prod">
-                                    <img src="assets/image/cart.jpg" alt="">
-                                </div>
-                                <div class="table__prod-name text-center">
-                                    <p>Minimalistic shop for multipurpose use</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$360.00</h5>
-                        </td>
-                        <td>
-                            <div class="table__prod-count d-flex justify-content-center">
-                                <input type="text" maxlength="3" value="1">
-                                <div class="d-flex flex-column">
-                                    <button class="quant-btn-plus"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
-                                    <button class="quant-btn-minus"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$720.00</h5>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center gap-3 flex-column flex-md-row">
-                                <div class="table__img-prod">
-                                    <img src="assets/image/cart.jpg" alt="">
-                                </div>
-                                <div class="table__prod-name text-center">
-                                    <p>Minimalistic shop for multipurpose use</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$360.00</h5>
-                        </td>
-                        <td>
-                            <div class="table__prod-count d-flex justify-content-center">
-                                <input type="text" value="1">
-                                <div class="d-flex flex-column">
-                                    <button class="quant-btn-plus"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
-                                    <button class="quant-btn-minus"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$720.00</h5>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center gap-3 flex-column flex-md-row">
-                                <div class="table__img-prod">
-                                    <img src="assets/image/cart.jpg" alt="">
-                                </div>
-                                <div class="table__prod-name text-center">
-                                    <p>Minimalistic shop for multipurpose use</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$360.00</h5>
-                        </td>
-                        <td>
-                            <div class="table__prod-count d-flex justify-content-center">
-                                <input type="text" value="1">
-                                <div class="d-flex flex-column">
-                                    <button class="quant-btn-plus"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
-                                    <button class="quant-btn-minus"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <h5>$720.00</h5>
-                        </td>
-                    </tr>
+                <tbody id="cartBody">
+                    <!-- js file here -->
                 </tbody>
                 <tfoot>
                     <tr>
@@ -217,9 +123,10 @@
                             <h4 class="text-start">subtotal</h4>
                         </td>
                         <td colspan="2">
-                            <h4 class="text-end">$2160.00</h4>
+                            <h4 class="text-end" id="total"></h4>
                         </td>
-                    </tr>
+                        </tr>
+                    <!-- js file here -->
                 </tfoot>
             </table>
             <div class="cart__coupon-area">
@@ -282,8 +189,8 @@
                 </form>
             </div>
             <div class="d-flex flex-wrap">
-                <a href="#" class="gray-btn rounded-0">CONTINUE SHOPPING</a>
-                <a href="#" class="main-btn rounded-0">PROCEED TO CHECKOUT</a>
+                <a href="category.html" class="gray-btn rounded-0">CONTINUE SHOPPING</a>
+                <a href="checkout.html" class="main-btn rounded-0">PROCEED TO CHECKOUT</a>
             </div>
         </div>
     </section>
@@ -349,6 +256,27 @@
         </div>
     </footer>
     <!-- End footer Section -->
+    <!-- login alert -->
+    <div class="login-alert">
+        <div class="alert-body">
+            <p class="alert-decription">we are happy to log in to add a product to your cart</p>
+            <div class="d-flex justify-content-around">
+                <button class="main-btn" id="loginAccept">ok</button>
+                <button class="main-btn" id="loginReject">not now</button>
+            </div>
+        </div>
+    </div>
+    <!-- delete alert -->
+    <div class="delete-alert">
+        <div class="alert-body">
+            <p class="alert-decription">Are you sure to delete this product from the cart?</p>
+            <div class="d-flex justify-content-around">
+                <button class="main-btn" id="deleteAccept">yes i'm sure</button>
+                <button class="main-btn" id="deleteReject">no</button>
+            </div>
+        </div>
+    </div>
+    <!-- delete alert -->
 
     <!-- Bootstrap v5.3.0 js -->
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
@@ -356,6 +284,8 @@
     <script src="js/vendor/all.min.js"></script>
     <!-- js file -->
     <script src="js/app.js"></script>
+    <!-- cart js -->
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

@@ -63,7 +63,7 @@
                         <li class="nav-item">
                             <a class="nav-link " href="contact.html">CONTACT</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="login-btn">
                             <a class="nav-link  active" href="login.html">
                                 LOGIN
                                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
@@ -73,7 +73,7 @@
                     <ul class="navbar-nav flex-row align-items-center">
                         <li class="nav-item nav-item--cart">
                             <a class="nav-link " href="cart.html">
-                                <i class="fa-solid fa-briefcase"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </li>
                         <li class="nav-item nav-item--search">
@@ -125,9 +125,10 @@
                             <input type="text" name="first-name" id="first-name" placeholder="first-name">
                             <input type="text" name="last-name" id="last-name" placeholder="last-name">
                             <input type="email" name="Email" id="Email" placeholder="Email">
-                            <input type="password" name="Password" placeholder="Password" id="Password">
-                            <input type="password" name="confirm-password" placeholder="confirm password" id="confirm-password">
-                            <button class="main-btn w-100 my-3" type="submit">submit</button>
+                            <input type="password" name="Password" placeholder="Password" id="reg-Password">
+                            <input type="password" name="confirm-password" placeholder="confirm password"
+                                id="confirm-password">
+                            <button class="main-btn w-100 my-3" id="create-account-btn" type="submit">submit</button>
                         </form>
                     </div>
                 </div>
@@ -138,7 +139,6 @@
                         <a href="login.html" class="main-btn">Signin</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -208,6 +208,10 @@
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome Free v6.4.2 js -->
     <script src="js/vendor/all.min.js"></script>
+    <!-- js file -->
+    <script src="js/app.js"></script>
+    <!-- register js -->
+    <script src="js/register.js"></script>
 </body>
 
 </html>
